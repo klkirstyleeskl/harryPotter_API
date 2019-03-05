@@ -10,16 +10,14 @@ const CharacterDetail = ({character}) => {
             <dd>{character.name}</dd>
             <dt>Eye Colour:</dt>
             <dd>{character.eyeColour}</dd>
+            <dt>Age:</dt>
+            <dd>{2019 - character.yearOfBirth}</dd>
             <dt>Wand Length:</dt>
-            <dd>{character.wand.length}</dd>
-
-
-
-
-
-
+            <dd>{character.wand.length} </dd>
         </dl>
     )
+
+
 
 
 
