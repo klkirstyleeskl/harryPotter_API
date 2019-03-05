@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
 import './App.css';
+import CharacterContainer from './containers/CharacterContainer';
 
 class App extends Component {
   render() {
     return (
-      <h1>Harry Potter Dating App</h1>
+      <CharacterContainer/>
     );
   }
 }
