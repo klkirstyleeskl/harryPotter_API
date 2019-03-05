@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import CharacterSelect from "../components/CharacterSelect"
+import CharacterDetail from "../components/CharacterDetail"
 
 class CharacterContainer extends Component{
     constructor(props){
@@ -31,7 +32,7 @@ render(){
         <div>
         <h1>Harry Potter's Wild World of Eligible Witches and Wizards</h1>
         <CharacterSelect characters={this.state.characters} onCharacterSelected={this.handleCharacterSelected}/>
-
+        <CharacterDetail character={this.state.currentCharacter} />
         </div>
         
     )
