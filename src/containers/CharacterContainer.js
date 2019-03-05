@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import CharacterSelect from "../components/CharacterSelect"
 
 class CharacterContainer extends Component{
     constructor(props){
@@ -7,6 +8,7 @@ class CharacterContainer extends Component{
             characters: [],
             currentCharacter: null
         };
+        this.handleCharacterSelected = this.handleCharacterSelected.bind(this);
     }
 
     componentDidMount(){
@@ -17,12 +19,21 @@ class CharacterContainer extends Component{
         
     }
 
+    handleCharacterSelected(index){
+        const selectedCharacter = this.state.characters[index];
+        this.setState({currentCharacter: selectedCharacter})
+    }
+
 
 
 render(){
-    console.log(this.state.characters);
     return(
-        <h1>Harry Potter has an 11 inch wand</h1>
+        <div>
+        <h1>Harry Potter's Wild World of Eligible Witches and Wizards</h1>
+        <CharacterSelect characters={this.state.characters} onCharacterSelected={this.handleCharacterSelected}/>
+
+        </div>
+        
     )
 }
 
